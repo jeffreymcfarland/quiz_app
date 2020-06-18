@@ -19,6 +19,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/trivia", {
   useNewUrlParser: true, useFindAndModify: false
 });
 
+// Set Handlebars.
+const exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 // routes
 app.use(require("./routes/api-routes.js"));
 app.use(require("./routes/html-routes.js"));

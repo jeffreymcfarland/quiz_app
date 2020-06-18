@@ -1,6 +1,20 @@
 
-const callback = function(){
+const callback = () => {
   // Handler when the DOM is fully loaded
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   console.log("hello")
 };
